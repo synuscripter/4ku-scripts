@@ -1,19 +1,4 @@
-pcall(function()
-    game.StarterGui:SetCore("SendNotification", {
-     Title = '4ku scripts!';
-     Text = 'Loaded 4ku scripts!';
-     Duration = 2;
-    })
-if not game.Players.LocalPlayer:IsInGroup(12052955) then
- coroutine.resume(coroutine.create(function()
-    wait(2)
-    game.StarterGui:SetCore("SendNotification", {
-     Title = 'you are NOT in the group';
-     Text = 'the script will work but make sure to join the discord server for more scripts! copied in your clipboard';
-     Duration = 2;
-    })
-    setclipboard('https://discord.gg/V4VqcB5eM4')
- end))
+
 
  local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
  local Window = Library.CreateLib("4ku hub [ UPDATED ] v2 ", "DarkTheme")
