@@ -1,0 +1,61 @@
+getgenv().local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/synuscripter/4ku-scripts/main/Screen%20gui'))() function,
+end)
+
+pcall(function()
+       game.StarterGui:SetCore("SendNotification", {
+        Title = '4ku';
+        Text = 'Loaded 4ku scripts!';
+        Duration = 4;
+       })
+  if not game.Players.LocalPlayer:IsInGroup(12052955) then
+    coroutine.resume(coroutine.create(function()
+       wait(4)
+       game.StarterGui:SetCore("SendNotification", {
+        Title = 'you are NOT in the group';
+        Text = 'the script will still work but our group link was copied to your clipboard thx';
+        Duration = 4;
+       })
+       setclipboard('https://discord.gg/FQkJuVTRnn')
+    end))
+  end
+end)
+
+
+ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+ local Window = Library.CreateLib("4ku hub [ UPDATED ] v2 ", "DarkTheme")
+ 
+ local main = Window:NewTab("Main scripts")
+ local MainSection = main:NewSection("Main")
+ 
+ 
+ MainSection:NewButton("invisible fling", "Makes you fling people invisible!", function()
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/synuscripter/invisiblefling/main/invisiblefling'))()
+ end)
+ 
+ MainSection:NewButton("Fly fe", "Makes you fly Press E then tab! , or tab then E!", function()
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/synuscripter/synus-gui-free-/main/Synus%20fly%20(fling)'))()
+end)
+     
+MainSection:NewButton("Teleport!", "Click on your mouse where you wanna teleport", function()
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/synuscripter/Synus-teleport/main/teleportmouseclicksynus'))()
+end)
+ 
+
+MainSection:NewButton("Speed Super", "Makes you SUPER  speed", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/synuscripter/Speed-gui/main/SUPERSPEED'))()
+end)
+ 
+MainSection:NewButton("Backflip", "Makes you do backflips! press tab button 2 times to backflip!", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/synuscripter/4ku-scripts/main/back%20flip%20script'))()
+ end)
+
+
+
+local main = Window:NewTab("Headless korblox")
+local MainSection = main:NewSection("Avatar gui")
+
+
+
+MainSection:NewButton("Headless korblox", "Avatar gui made by rodizzy#0001", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/synuscripter/headlessgui/main/avatarguisynus'))()
+end)
