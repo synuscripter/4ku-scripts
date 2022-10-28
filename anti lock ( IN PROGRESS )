@@ -1,0 +1,32 @@
+local Toggled = true
+local KeyCode = "v"
+local hip = 2.80
+local val = -35
+while wait() do
+    if game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character.Humanoid then
+break
+    end
+end
+function ChangeVel()
+    local oldVelocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldVelocity.X, val, oldVelocity.Z)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldVelocity.X, oldVelocity.Y, oldVelocity.Z)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldVelocity.X, val, oldVelocity.Z)
+    game.Players.LocalPlayer.Character.Humanoid.HipHeight = hip
+end
+game:GetService("UserInputService").InputBegan:Connect(function(Key)
+    if Key.KeyCode == Enum.KeyCode[KeyCode:upper()] and not game:GetService("UserInputService"):GetFocusedTextBox() then
+        if Toggled then
+            Toggled = false
+            game.Players.LocalPlayer.Character.Humanoid.HipHeight = hip
+
+        elseif not Toggled then
+            Toggled = true
+
+            while Toggled do
+                ChangeVel()
+                task.wait()
+            end
+        end
+    end
+end)
