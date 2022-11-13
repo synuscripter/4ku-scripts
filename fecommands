@@ -1,0 +1,3 @@
+print("this isint 4ku scripts we just teamed up with infinety yeild / partnership")
+print("designed gui / scripted and loadstring = true  wich is loadstring made by rodizzy")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
