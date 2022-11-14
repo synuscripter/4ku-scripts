@@ -1,4 +1,4 @@
-if game.PlaceId == 2788229376 then
+if game.PlaceId == 10305774180 then
     getgenv().adverting = true
     local vu = game:GetService("VirtualUser")
     game:GetService("Players").LocalPlayer.Idled:connect(function()
@@ -2546,7 +2546,7 @@ if game.PlaceId == 2788229376 then
                 local text = script.Parent
 
                 while wait() do
-                    text.Text = "Money: " ..
+                    text.Text = "Money " ..
                                     game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.MoneyText.Text
                 end
             end
